@@ -1,0 +1,91 @@
+body {
+    background-color:#F6F4E8 ;
+    font-family: 'Prata', serif;
+    font-size: 150%;
+    color: #1D3124;
+}
+a{
+    text-decoration: none;
+    color: #1D3124;
+}
+a:hover{
+    color: #BACEC1;
+}
+/* Debut css Header */
+
+.active{
+    color: #BACEC1;
+    text-decoration: underline;
+}
+.active:hover{
+    color: #1D3124;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+.icon{
+    width: 50px ;
+    height: auto;
+}
+.menu{
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 4%;
+}
+
+.navbar-light{
+    background-color:#BACEC1 ;
+}
+
+
+/* Fin css Header */
+/* Debut  css Body */
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding: 2%;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1rem;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+}
+.container *{
+    padding: 1%;
+}
+.main-content img{
+    width: auto;
+    height: 100%;
+}
+button{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+button img{
+    width: 5%;
+    height: auto;
+}
+.btn-primary {
+    background-color: #E59560;
+    border-color: #E59560;
+}
+
+.btn-primary:hover {
+    background-color: rgb(54, 53, 66);
+    border: black;
+}
+/* Fin  css Body */
