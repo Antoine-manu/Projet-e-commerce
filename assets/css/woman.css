@@ -14,6 +14,7 @@ a:hover {
     color: #BACEC1;
 }
 
+
 /* Debut css Header */
 
 .active {
@@ -83,7 +84,7 @@ li {
     margin-top: 1%;
 }
 .filters ul{
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -150,12 +151,18 @@ li {
     width: 100%;
     height: 75%;
 }
-.main-content {
+main{
     padding-top: 5%;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main .card{
+    margin: 2%;
+    padding: 0;
 }
 
 .btn-primary {
@@ -177,6 +184,7 @@ li {
     color: #E59560;
     font-weight: bold;
 }
+
 
 /* Fin  css Body */
 

@@ -1,22 +1,39 @@
-var produit = [
-    {id: 1, img: "../img/vetements/homme/hmgoepprod (1).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 2, img: "../img/vetements/homme/hmgoepprod (2).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 3, img: "../img/vetements/homme/hmgoepprod (3).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 4, img: "../img/vetements/homme/hmgoepprod (4).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 5, img: "../img/vetements/homme/hmgoepprod (5).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 6, img: "../img/vetements/homme/hmgoepprod (6).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 7, img: "../img/vetements/homme/hmgoepprod (7).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 8, img: "../img/vetements/homme/hmgoepprod (8).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 9, img: "../img/vetements/homme/hmgoepprod (9).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 10, img: "../img/vetements/homme/hmgoepprod (10).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 11, img: "../img/vetements/homme/hmgoepprod (11).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 12, img: "../img/vetements/homme/hmgoepprod (12).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 13, img: "../img/vetements/homme/hmgoepprod (13).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 14, img: "../img/vetements/homme/hmgoepprod (14).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 15, img: "../img/vetements/homme/hmgoepprod (15).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 16, img: "../img/vetements/homme/hmgoepprod (16).jpg", name: "Sweat", price: 39.99 }, 
-    {id: 17, img: "../img/vetements/homme/hmgoepprod (17).jpg", name: "Sweat", price: 39.99 }, 
-    ]
+var base = JSON.parse(product)
 
-const product = URLSearchParams.get('id')
-alert(product)
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+const id = urlParams.get('id') 
+console.log(id)
+
+function createCard() {
+        $('.itemsimg').html(
+            '<img src="'+base[id-1].img+'" alt=""></img>'
+            );
+        $('.itemscarac').html(
+            `<h1> ${base[id-1].nom} </h1>
+            <h2> ${base[id-1].price}€ </h2>
+            <p>${base[id-1].desc}</p>`
+            );
+            
+}
+createCard() 
+
+function similar(){
+    for(i=0;i<4;i++) {
+        let number =  Math.floor(Math.random() * Math.floor(base.length));
+        console.log(number)
+        $('.similar').append(
+        '<div class="card" style="width: 18rem;">'+
+        '<img class="card-img-top" src="'+ base[number].img +'" alt="Card image cap" class="image">'+
+        '<div class="card-body">'+
+        '<h2 class="card-text"><a href="menproduct.html?id=' + base[number].id +'">'+base[number].nom+'</a> </h2>'+ 
+        '</div>'+
+        '</div>'
+        );
+    }
+}
+
+similar()
