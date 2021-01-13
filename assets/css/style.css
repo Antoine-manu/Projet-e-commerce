@@ -1,19 +1,31 @@
 body {
     background-image: url(/assets/img/background.PNG);
     background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Prata', serif;
-    font-size: 150%;
+    background-size: 100%;
+    background-color: #F6F4E8;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
     color: #1D3124;
 }
-a{
+
+a {
     text-decoration: none;
     color: #1D3124;
 }
-a:hover{
+
+a:hover {
     color: #BACEC1;
 }
+
 /* Debut css Header */
+
+.active{
+    color: #BACEC1;
+    text-decoration: underline;
+}
+.active:hover{
+    color: #1D3124;
+}
 
 li {
     list-style-type: none;
@@ -31,24 +43,213 @@ li {
     justify-content: space-between;
     padding-right: 4%;
 }
-
+.menu a:nth-child(5){
+    display: none;   
+}
 .navbar-light{
     background-color:#BACEC1 ;
 }
+header nav div a{
+    display: none;
+}
+/* Burgermenu */
+#burgermenu{
+    display: none;
+    float: left;
+}
+
+/* Burgermenu */
+
+/* mediaquery */
+@media (max-width: 1024px){
+    nav ul li{
+        display: none;
+    }
+    body{
+        background-image: url(/assets/img/backgroundsmall.png);
+    }
+    .menu{
+        flex-direction: column;
+    }
+     #burgermenu{
+         display: block;
+     }
+     header{
+         padding: 1%;
+         background-color: rgba(1, 1, 1, 20%);
+     }
+     .burgerdisplay{
+         display: block;
+     }
+     .menu a:nth-child(5){
+        display: block;   
+    }
+     .menu a:nth-child(4){
+         display: none;
+     }
+     .menu a:nth-child(8){
+         display: none;
+     }
+     header nav div div a{
+        display: inline; 
+    }
+ 
+    header nav div{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav div div img{
+        width: 75px;
+        height: auto;
+        
+    }
+    .active{
+        color:#E59560;
+    }
+    a:hover {
+        color: #E59560;
+    }
+    
+}
+/* mediaquery */
 
 /* Fin css Header */
 
-/* Debut  css Body */
+/* Deroulant */
 
-.main-content{
+.fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+/* Deroulant */
+
+/* Filtres */
+.filters{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 25%;
-    margin: auto;
-    margin-top: 16%;
+    flex-direction: row;
+    border-top:solid 1px #1D3124;
+    border-bottom:solid 1px #1D3124;
     padding: 1%;
+    margin-top: 1%;
+}
+.filters ul{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.filters select{
+    background-color: #F6F4E8;
+    border: none;cloed
+}
+/* Filtres */
+
+/* Slide */
+.framer{
+    overflow: hidden;
+}
+.framer figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s framer infinite;
+}
+.framer figure img{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+@keyframes framer {
+    0% {
+        left: 0;
+    }
+    25%{
+        left: 0;
+    }
+    33%{
+        left: -100%;
+    }
+    50%{
+        left:-100%;
+    }
+    66%{
+        left: -200%;
+    }
+    90%{
+        left: -200%;
+    }
+    99%{
+        left: -300%;
+    }
+    100%{
+        left: -300%;
+    }
+    
+
 }
 
 
+/* Slide */
+
+/* Debut  css Body */
+.background{
+    background: none;
+    background-color: #F6F4E8;
+    }
+.card-body {
+    background-color: #BACEC1;
+}
+.card img{
+    width: 100%;
+    height: 75%;
+}
+section{
+    padding-top: 5%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section .card{
+    margin: 2%;
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #E59560;
+    border-color: #E59560;
+}
+
+.btn-primary:hover {
+    background-color: rgb(54, 53, 66);
+}
+
+.main-content section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+}
+.card-title a:hover{
+    color: #E59560;
+    font-weight: bold;
+}
+.masking{
+    display: none;
+}
+.index{
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
 /* Fin  css Body */
+

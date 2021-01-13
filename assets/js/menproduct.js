@@ -1,4 +1,4 @@
-var base = JSON.parse(product)
+var productmen = JSON.parse(product)
 
 const queryString = window.location.search;
 console.log(queryString);
@@ -10,12 +10,12 @@ console.log(id)
 
 function createCard() {
         $('.itemsimg').html(
-            '<img src="'+base[id-1].img+'" alt=""></img>'
+            '<img src="'+productmen[id-1].img+'" alt=""></img>'
             );
         $('.itemscarac').html(
-            `<h1> ${base[id-1].nom} </h1>
-            <h2> ${base[id-1].price}€ </h2>
-            <p>${base[id-1].desc}</p>`
+            `<h1> ${productmen[id-1].nom} </h1>
+            <h2> ${productmen[id-1].price}€ </h2>
+            <p>${productmen[id-1].desc}</p>`
             );
             
 }
@@ -23,13 +23,13 @@ createCard()
 
 function similar(){
     for(i=0;i<4;i++) {
-        let number =  Math.floor(Math.random() * Math.floor(base.length));
+        let number =  Math.floor(Math.random() * Math.floor(productmen.length));
         console.log(number)
         $('.similar').append(
         '<div class="card" style="width: 18rem;">'+
-        '<img class="card-img-top" src="'+ base[number].img +'" alt="Card image cap" class="image">'+
+        '<img class="card-img-top" src="'+ productmen[number].img +'" alt="Card image cap" class="image">'+
         '<div class="card-body">'+
-        '<h2 class="card-text"><a href="menproduct.html?id=' + base[number].id +'">'+base[number].nom+'</a> </h2>'+ 
+        '<h2 class="card-text"><a href="menproduct.html?id=' + productmen[number].id +'">'+productmen[number].nom+'</a> </h2>'+ 
         '</div>'+
         '</div>'
         );

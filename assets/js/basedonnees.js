@@ -1,4 +1,4 @@
-var product = [
+var productmen = [
     {
         "id": 1,
         "img": "assets/img/vetements/homme/hmgoepprod (1).jpg",
@@ -179,5 +179,12 @@ var product = [
         "classname" : "pants 50 bleu"
     },
 ]
-product = JSON.stringify(product)
-console.log(product)
+productmen = JSON.stringify(productmen)
+
+var productwoman = []
+
+productwoman = JSON.stringify(productwoman)
+
+var productnew = []
+
+productnew = JSON.stringify(productnew)

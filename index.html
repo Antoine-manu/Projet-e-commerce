@@ -1,59 +1,169 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/js/script.js">
-    <title>Hello, world!</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-    <!-- font -->
+  <!-- Bootstrap CSS & link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  </head>
-  <body>
-      <!-- Debut header -->
-    <header>
-        <nav>
-            <ul class="menu">
-                <a href="men.html" ><li >Homme</li></a>
-                <a href="woman.html" ><li >Femme</li></a>
-                <a href="" ><li >News</li></a>
-                <a href="" ><li ><img src="assets/img/V.F.C.png" alt=""></li></a>
-                <a href="apropos.html" ><li >A propos</li></a>
-                <a href="" ><li ><img src="assets/img/account.png" alt="" class=" icon "></li></a>
-                <a href="" ><li ><img src="assets/img/paniers classique.png" alt="" class="icon"></li></a>
-            </ul>
-        </nav>
+  <title>Homme</title>
 
-    </header>
-    <!-- Fin header -->
-        
-    <!-- Debut main -->
-    <main>
-        <div class="main-content">
-            <div><h1>New Collection</h1></div>
-            <div><a href=""><h3>Cliquez ici pour ne savoir plus :</h3></a></div>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- font -->
+
+</head>
+
+<body onload="showindex()">
+  <!-- Debut header -->
+  <header id="header">
+    <nav>
+        <ul class="menu">
+            <a href="#" rel="unfollow" onclick="showmen() ,createMenCard()"><li>Homme</li></a>
+            <a href="#" rel="unfollow" onclick="showwoman()"><li>Femme</li></a>
+            <a href="#" rel="unfollow" onclick="shownew()"><li >News</li></a>
+            <a href="#" rel="unfollow" onclick="showindex()"><li ><img src="assets/img/V.F.C.png" alt=""></li></a>
+            <a href="#" rel="unfollow" onclick="showindex()"><li >Home</li></a>
+            <a href="#" rel="unfollow" onclick="showpropos()"><li >A propos</li></a>
+            <a href="#" rel="unfollow"><li ><img src="assets/img/account.png" alt="" class=" icon "></li></a>
+            <a href="#" rel="unfollow"><li ><img src="assets/img/paniers classique.png" alt="" class="icon"></li></a>
+        </ul>
+        <div>
+          <button id="burgermenu" onclick="burger()"><img src="/assets/img/588a64e7d06f6719692a2d11.png" alt=""  class="icon"></button>
+          <div>
+            <a href="" ><img src="assets/img/paniers classique.png" alt="" class="icon"></a>
+          </div>
         </div>
-    </main>
-    <!-- Fin main -->
+    </nav>
 
-    <!-- Debut footer -->
-    <footer>
+</header>
+  <!-- Fin header -->
 
-    </footer>
-    <!-- Fin du footer -->
+  <!-- Pubs -->
+  <div class="framer ">
+    <figure>
+      <img src="assets/img/banner.jpg" alt="">
+      <img src="assets/img/banner1.png" alt="">
+      <img src="assets/img/banner3.jpg" alt="">
+      <img src="assets/img/banner.jpg" alt="">
+    </figure>
+  </div>
+  <!-- Pubs -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <!-- Sticky elements -->
+  <div class="scrollUp">
+    <a href="#header"><img src="/assets/img/home.png" alt="" class="icon fixed"></a>
+  </div>
+  <!-- Sticky elements -->
 
 
-  </body>
+
+  <!-- Debut main -->
+  <!-- <button onclick="filtrerVille(this);" data-ville="pull">Sweats</button> -->
+  <!-- Debut filtres -->
+  <div class="filters">
+    <ul>
+      <li>Filtres</li>
+      <li>
+        <select id="type" onclick="filterstype()">
+          <option value="0" selected disabled>Type</option>
+          <option value="1" >Sweat</option>
+          <option value="2">T-Shirt</option>
+          <option value="3">Chemise</option>
+          <option value="4">Pantalon</option>
+          <option value="5">Manteaux</option>
+          <option value="6">None</option>
+        </select>
+      </li>
+      <li>
+        <select id="color" onclick="filterscolor()">
+          <option value="0" selected disabled>Couleurs</option>
+          <option value="1">Noir</option>
+          <option value="2">Blanc</option>
+          <option value="3">Marron</option>
+          <option value="4">Beige</option>
+          <option value="5">Vert</option>
+          <option value="6">Rose</option>
+          <option value="7">Bleu</option>
+        </select>
+      </li>
+      <li>
+        <select id="price" onclick="filtersprice()">
+          <option value="0" selected disabled>Prix</option>
+          <option value="1" >- de 25</option>
+          <option value="2">- de 50</option>
+          <option value="3">- de 75</option>
+          <option value="4">- de 100</option>
+          <option value="5">+ de 100</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Debut filtres -->
+
+  <main>
+    <section class="men-product">
+
+    </section>
+    <section class="woman-product">
+
+    </section>
+    <section class="new-product">
+
+    </section>
+    <section class="index">
+      <div class="main-content">
+        <h1>New collection</h1>
+        <a href="#" rel="unfollow" onclick="shownew()"><p>Cliquez ici pour en savoir plus</p></a>
+      </div>
+    </section>
+    <section class="product">
+      <div class="itemsimg">
+
+      </div>
+      <div class="container">
+        <div class="itemscarac">
+  
+        </div>
+        <div>
+          <h2>Couleurs : </h2>
+          
+        </div>
+        <div>
+          <h2>Selectionnez une taille : </h2>
+          
+        </div>
+        <a href="#" class="btn btn-primary edit">Ajouter au panier</a>
+      </div>
+    </section>
+
+  </main>
+  <!-- Fin main -->
+
+  <!-- Debut footer -->
+  <footer >
+
+  </footer>
+  <!-- Fin du footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/assets/js/basedonnees.js"></script>
+  <script src="/assets/js/script.js"></script>
+  
+  
+
+
+</body>
+
 </html>
