@@ -14,6 +14,7 @@ jQuery(function () {
 
 function burger() {
   $('.menu li').toggleClass("burgerdisplay")
+  //je rajoute une classe quand je clique sur le bugrer menu
 }
 
 var productmen = JSON.parse(productmen)
@@ -23,6 +24,7 @@ var productmen = JSON.parse(productmen)
 // Création de la page avec tout les produits pour homme
 function createMenCard() {
   for (let i = 0; i < productmen.length; i++) {
+    //je remplis ma section d'autant de card qu'il y as de ligne
     $('.men-product').append(
       '<div class="card ' + productmen[i].classname + '" style="width: 18rem;">' +
       '<img class="card-img-top" src="' + productmen[i].img + '" alt="image du ' + productmen[i].nom + '">' +
@@ -32,6 +34,7 @@ function createMenCard() {
       '<a href="#" class="btn btn-primary">Ajouter au panier</a>' +
       '</div>' +
       '</div>');
+      //je remplit les card dynamiquement en loadant les informations de la data base
   }
 }
 createMenCard()
@@ -42,7 +45,7 @@ function createMenProduct(id) {
   $('.filters').hide();
   $('.framer').hide();
   $('.product').show();
-
+// je masque les different elements que je ne veux pas 
   $('.itemsimg').append(
     `<img src=" ${productmen[id - 1].img} " alt="">`
   );
@@ -51,10 +54,12 @@ function createMenProduct(id) {
       <h2> ${productmen[id-1].price}€ </h2>
       <p>${productmen[id-1].desc}</p>`
   );
+  // affichage des données de l'article en question
   id=0
   for (i = 0; i < 4; i++) {
     let number = Math.floor(Math.random() * Math.floor(productmen.length));
     console.log(number)
+    // ici je tire des nombres aleatoires afin d'afficher des lignes aleatoires du tableau pour montrer d'autres articles 
     $('.similar').append(
       `<div class="card" style="width: 18rem;">
         <img class="card-img-top" src=" ${productmen[number].img} " alt="Card image cap" class="image">
@@ -64,6 +69,7 @@ function createMenProduct(id) {
         <a href="#" class="btn btn-primary">Ajouter au panier</a>
         </div>
         </div>`
+        //j'affiche les informations des produits similaires en utilisant les nombres aleatoires dans le tableau comme reperes 
     );
   }
 
