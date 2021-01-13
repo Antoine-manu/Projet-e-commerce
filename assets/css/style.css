@@ -109,6 +109,9 @@ header nav div a{
     a:hover {
         color: #E59560;
     }
+    .productmain{
+        flex-wrap: wrap;
+    }
     
 }
 /* mediaquery */
@@ -250,6 +253,34 @@ section .card{
     text-align: center;
     margin-top: 5%;
 }
-
+/* Css page produit */
+.productmain{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    
+}
+.similar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.similar div{
+    height: 100%;
+}
+.itemscarac{
+    align-self: center;
+}
+.boutonpanier {
+    width: 100%;
+}
+/* Css page produit */
 /* Fin  css Body */
 
