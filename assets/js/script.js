@@ -140,19 +140,22 @@ function generatePanier(id,name){
     var product = productnew
     var name = 'new'
   }
+  // Ici comme plusieurs fois en bas je declare d'ou viens le clic en l'occurence grace aux parametres mis dans la fonctions dans l'index
   id=id-1
-  console.log(id,name)
+  var identification = name+id
+  console.log(identification)
   totaladd=totaladd+product[id].price
   $('.panier').append(
-    `<div id="${id}">
+    `<div id="${identification}">
     <img src="${product[id].img}" alt="">
     <div>
       <h2>${product[id].price}</h2>
       <h3>${product[id].nom}</h3>
-      <button class="btn btn-primary" onclick="deleteCartProduct(${id},${product[id].price})">Supprimer du panier</button>
+      <button class="btn btn-primary" onclick="deleteCartProduct(${identification},${product[id].price})">Supprimer du panier</button>
     </div>
     
   </div>`
+  // Je genere les page produit dans la div panier en fonction de quel page il s'agit et dans quel tableau en lui attribiuant un id
   );
   totalprice()
 
@@ -160,14 +163,20 @@ function generatePanier(id,name){
 function showpanier() {
   $('.panier').toggle();
   $('.account').hide();
+  $('.menu li').removeClass("burgerdisplay")
 }
+//Ici la fonction show panier est utilisée sur l'icon du panier pour le montrer et desactiver les elements pouvant nuir a la visibilitée
+
 
 function deleteCartProduct(id,price){
   $('#'+id+'').remove();
  
   totaldel=totaldel-price
+  //j'ajoute a la variable total del le total a enlever au prix final du site 
   totalprice()
 }
+//Fonction pour supprimer un produit du panier 
+
 function totalprice(){
   total=totaladd+totaldel
   total=Math.round(x=total * 100) / 100
@@ -176,28 +185,30 @@ function totalprice(){
     '<a href="#" class="btn btn-primary" onclick="commander()">Commander</a>'
   );
 }
-
+//Affichage du prix total du panier et du bouton commander renvoyant vers la fonciton commander
 function commander(){
   alert('Commande effectuée avec succes')
   $('.panier').empty();
   $('.panier').hide();
-
 }
-function showaccount() {
-  $('.account').toggle();
-  $('.panier').hide();
-}
-// Ici je definis une fonction qui affiche ou non le panier au clic sur le bouton panier
-
-
-// Panier
-
+//fonction qui simule une commande en envoyant une alerte, vidant le panier et en le cachant
 function clearproduct(){
   $('.men-product').empty();
   $('.woman-product').empty();
   $('.news-product').empty();
 }
+//fonction pour vider les pages afin d'eviter que tout soit charge en permanence et se charge plusieurs fois
 
+// Panier
+
+function showaccount() {
+  $('.account').toggle();
+  $('.panier').hide();
+  $('.menu li').removeClass("burgerdisplay")
+}
+// Ici je definis une fonction qui affiche ou non le panier au clic sur le bouton panier
+
+//toutes les fonctions commencant par show sont identiques mais masques et montres diffentes div
 function showmen() {
   $('.men-product').show();
   $('.woman-product').hide();
@@ -209,7 +220,7 @@ function showmen() {
   $('.framer').show();
   $('body').addClass('background')
   productclear()
-
+  $('.contact').hide();
 }
 
 function showwoman() {
@@ -223,6 +234,7 @@ function showwoman() {
   $('.framer').show();
   $('body').addClass('background')
   productclear()
+  $('.contact').hide();
 }
 
 function shownew() {
@@ -236,6 +248,7 @@ function shownew() {
   $('.framer').show();
   $('body').addClass('background')
   productclear()
+  $('.contact').hide();
 }
 
 function showindex() {
@@ -251,6 +264,7 @@ function showindex() {
   productclear()
   $('.panier').hide();
   $('.account').hide();
+  $('.contact').hide();
 }
 
 function showpropos() {
@@ -264,6 +278,20 @@ function showpropos() {
   $('.framer').hide();
   $('body').addClass('background')
   productclear()
+  $('.contact').hide();
+}
+function showcontact() {
+  $('.men-product').hide();
+  $('.woman-product').hide();
+  $('.new').hide();
+  $('.index').hide();
+  $('.propos').hide();
+  $('.product').hide();
+  $('.filters').hide();
+  $('.framer').hide();
+  $('body').addClass('background')
+  productclear()
+  $('.contact').show();
 }
 
 function showproduct() {
@@ -277,8 +305,10 @@ function showproduct() {
   $('.framer').show();
   $('body').addClass('background')
   productclear()
+  $('.contact').hide();
 }
 
+//toutes les fonctions filtres sont identiques mais comme au dessus masques et montre differentes div en fonction de la valeur obtenue dans le select
 function filterstype() {
   let type = $("#type").val();
 

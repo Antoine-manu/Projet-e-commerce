@@ -33,7 +33,7 @@
             <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li ><img src="assets/img/V.F.C.png" alt="logo du site"></li></a>
             <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li >Home</li></a>
             <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()"><li >A propos</li></a>
-            <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()"><li >Contact</li></a>
+            <a href="#" rel="unfollow" onclick="clearproduct(), showcontact()"><li >Contact</li></a>
             <a href="#" rel="unfollow"><li ><img src="assets/img/account.png" alt="icon account" class=" icon " onclick="showaccount()"></li></a>
         </ul>
         <div>
@@ -71,7 +71,7 @@
       </form>
       <div>
         <button onclick="showaccount()">Se connecter</button>
-        <button class="buttonaccount" onclick="showaccount()">Back</button>
+        <button class="buttonaccount" onclick="showaccount(), burger()">Back</button>
       </div>
       
     </div>
@@ -86,7 +86,7 @@
 
 
   <!-- Debut main -->
-  <!-- <button onclick="filtrerVille(this);" data-ville="pull">Sweats</button> -->
+  
   <!-- Debut filtres -->
   <div class="filters">
     <ul>
@@ -162,6 +162,9 @@
       </div>
     </section>
     <section class="propos">
+      
+    </section>
+    <section class="contact">
       <div>
         <form action="get">
           <label for="">Adresse mail :</label>
