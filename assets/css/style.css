@@ -302,17 +302,17 @@ section .card{
 .account button{
     border-radius: 5px;
 }
-.propos{
+.contact{
     display: flex;
     flex-direction: column;
     width: 50%;
 }
-.propos div form{
+.contact div form{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.propos div form input:not(:last-child){
+.contact div form input:not(:last-child){
     width: 50%;
     margin: auto;
 }
@@ -380,6 +380,7 @@ section .card{
         top: 6rem;
     }
     .account{
+        z-index: 100;
         width: 70%;
     }
 }

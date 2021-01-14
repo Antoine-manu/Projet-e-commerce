@@ -151,7 +151,7 @@ function generatePanier(id,name){
     <div>
       <h2>${product[id].price}</h2>
       <h3>${product[id].nom}</h3>
-      <button class="btn btn-primary" onclick="deleteCartProduct(${identification},${product[id].price})">Supprimer du panier</button>
+      <button class="btn btn-primary" onclick="deleteCartProduct(\'${identification}\',${product[id].price})">Supprimer du panier</button>
     </div>
     
   </div>`
@@ -169,6 +169,7 @@ function showpanier() {
 
 
 function deleteCartProduct(id,price){
+  var id=id
   $('#'+id+'').remove();
  
   totaldel=totaldel-price
@@ -188,8 +189,11 @@ function totalprice(){
 //Affichage du prix total du panier et du bouton commander renvoyant vers la fonciton commander
 function commander(){
   alert('Commande effectuée avec succes')
-  $('.panier').empty();
+  $('.panier>div').empty();
   $('.panier').hide();
+  total=0
+  totaldel=0
+  totaladd=0
 }
 //fonction qui simule une commande en envoyant une alerte, vidant le panier et en le cachant
 function clearproduct(){
