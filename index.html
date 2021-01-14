@@ -27,20 +27,17 @@
   <header id="header">
     <nav>
         <ul class="menu">
-            <a href="#" rel="unfollow" onclick="showmen()"><li>Homme</li></a>
-            <a href="#" rel="unfollow" onclick="showwoman()"><li>Femme</li></a>
-            <a href="#" rel="unfollow" onclick="shownew()"><li >News</li></a>
-            <a href="#" rel="unfollow" onclick="showindex()"><li ><img src="assets/img/V.F.C.png" alt=""></li></a>
-            <a href="#" rel="unfollow" onclick="showindex()"><li >Home</li></a>
-            <a href="#" rel="unfollow" onclick="showpropos()"><li >A propos</li></a>
-            <a href="#" rel="unfollow"><li ><img src="assets/img/account.png" alt="" class=" icon "></li></a>
-            <a href="#" rel="unfollow"><li ><img src="assets/img/paniers classique.png" alt="" class="icon"></li></a>
+            <a href="#" rel="unfollow" onclick="showmen(), clearproduct(), createCard('men')"><li>Homme</li></a>
+            <a href="#" rel="unfollow" onclick="showwoman(), clearproduct(), createCard('woman')"><li>Femme</li></a>
+            <a href="#" rel="unfollow" onclick="shownew(), clearproduct(), createCard('new')"><li >News</li></a>
+            <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li ><img src="assets/img/V.F.C.png" alt="logo du site"></li></a>
+            <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li >Home</li></a>
+            <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()"><li >A propos</li></a>
+            <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()"><li >Contact</li></a>
+            <a href="#" rel="unfollow"><li ><img src="assets/img/account.png" alt="icon account" class=" icon " onclick="showaccount()"></li></a>
         </ul>
         <div>
           <button id="burgermenu" onclick="burger()"><img src="/assets/img/588a64e7d06f6719692a2d11.png" alt=""  class="icon"></button>
-          <div>
-            <a href="" ><img src="assets/img/paniers classique.png" alt="" class="icon"></a>
-          </div>
         </div>
     </nav>
 
@@ -50,17 +47,39 @@
   <!-- Pubs -->
   <div class="framer ">
     <figure>
-      <img src="assets/img/banner.jpg" alt="">
-      <img src="assets/img/banner1.png" alt="">
-      <img src="assets/img/banner3.jpg" alt="">
-      <img src="assets/img/banner.jpg" alt="">
+      <img src="assets/img/banner.png" alt="adspub">
+      <!-- les banniere addblock c'etait une petite blague pour desactiver adblock :) -->
+      <img src="assets/img/banner.png" alt="adspub">
+      <img src="assets/img/banner.png" alt="adspub">
+      <img src="assets/img/banner.png" alt="adspub">
     </figure>
   </div>
   <!-- Pubs -->
-
+  <div class="panier" >
+    <div></div>
+    <div class="total">
+      
+    </div>
+  </div>
+  <div class="account" >
+    <div>
+      <form action="">
+        <label for="user">Username</label>
+        <input type="text" name="user" id="">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="">
+      </form>
+      <div>
+        <button onclick="showaccount()">Se connecter</button>
+        <button class="buttonaccount" onclick="showaccount()">Back</button>
+      </div>
+      
+    </div>
+  </div>
   <!-- Sticky elements -->
   <div class="scrollUp">
     <a href="#header"><img src="/assets/img/home.png" alt="" class="icon fixed"></a>
+    <a href="#header"><img src="/assets/img/paniers classique.png" onclick="showpanier()" alt="icon panier" class="icon fixed2"></a>
   </div>
   <!-- Sticky elements -->
 
@@ -140,6 +159,27 @@
       </div>
       <div class="similar">
 
+      </div>
+    </section>
+    <section class="propos">
+      <div>
+        <form action="get">
+          <label for="">Adresse mail :</label>
+          <input type="email">
+          <label for="">Nom :</label>
+          <input type="text">
+          <label for="">Prenom :</label>
+          <input type="text">
+          <label for="">Telephone :</label>
+          <input type="tel">
+          <label for="">Demande :</label>
+          <input type="text-area">
+        </form>
+      </div>
+      <div>
+        <img src="/assets/img/icons8-facebook-64.png" alt="icon facebook">
+        <img src="/assets/img/icons8-instagram-64.png" alt="icon instagram">
+        <img src="/assets/img/icons8-twitter-64.png" alt="icon twitter">
       </div>
     </section>
 

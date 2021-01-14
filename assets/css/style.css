@@ -29,7 +29,7 @@ a:hover {
 
 li {
     list-style-type: none;
-    display: inline;
+    /* display: inline; */
 }
 .icon{
     width: 50px ;
@@ -60,65 +60,10 @@ header nav div a{
 
 /* Burgermenu */
 
-/* mediaquery */
-@media (max-width: 1024px){
-    nav ul li{
-        display: none;
-    }
-    body{
-        background-image: url(/assets/img/backgroundsmall.png);
-    }
-    .menu{
-        flex-direction: column;
-    }
-     #burgermenu{
-         display: block;
-     }
-     header{
-         padding: 1%;
-         background-color: rgba(1, 1, 1, 20%);
-     }
-     .burgerdisplay{
-         display: block;
-     }
-     .menu a:nth-child(5){
-        display: block;   
-    }
-     .menu a:nth-child(4){
-         display: none;
-     }
-     .menu a:nth-child(8){
-         display: none;
-     }
-     header nav div div a{
-        display: inline; 
-    }
- 
-    header nav div{
-        display: flex;
-        justify-content: space-between;
-    }
-    header nav div div img{
-        width: 75px;
-        height: auto;
-        
-    }
-    .active{
-        color:#E59560;
-    }
-    a:hover {
-        color: #E59560;
-    }
-    .productmain{
-        flex-wrap: wrap;
-    }
-    
-}
-/* mediaquery */
 
 /* Fin css Header */
 
-/* Deroulant */
+/* objets fixe */
 
 .fixed{
     position: fixed;
@@ -126,9 +71,19 @@ header nav div a{
     right: 0;
     margin-right: 2%;
     margin-bottom: 2%;
+    z-index: 100;
 }
 
-/* Deroulant */
+.fixed2{
+    position: fixed;
+    bottom: 0;
+    left: 1;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    z-index: 100;
+}
+
+/* objet fixe */
 
 /* Filtres */
 .filters{
@@ -147,7 +102,7 @@ header nav div a{
 }
 .filters select{
     background-color: #F6F4E8;
-    border: none;cloed
+    border: none;
 }
 /* Filtres */
 
@@ -213,7 +168,7 @@ header nav div a{
 }
 section{
     padding-top: 5%;
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -221,7 +176,8 @@ section{
     justify-content: center;
 }
 section .card{
-    margin: 2%;
+    margin: 0.02em;
+    margin-top: 1%;
     padding: 0;
 }
 
@@ -286,6 +242,145 @@ section .card{
 .boutonpanier {
     width: 100%;
 }
+
 /* Css page produit */
+
+/* Panier */
+
+.panier{
+    border: solid black 2px;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 20%;
+    height: auto;
+    top: 5.4em;
+    left: 0;
+    background-color:#F6F4E8 ;
+    z-index: 100;
+}
+.panier>div{
+    display: flex;
+    flex-direction: row;
+    border-radius: solid black 2px;
+
+}
+.panier div img{
+    height: 20%;
+    width: 20%;
+}
+.panier *{
+    margin: 0;
+    padding: 0;
+}
+.total{
+    border-top: solid black 2px;
+    text-align: center;
+    display: flex;
+    padding: 1%;
+    justify-content: space-between;
+}
+/* Panier */
+
+/* account */
+.account{
+    border: solid black 2px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 4em;
+    right: 1em;
+    background-color:#F6F4E8 ;
+    display: flex;
+    flex-direction: column;
+}
+.account>div>form{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+}
+.account button{
+    border-radius: 5px;
+}
+.propos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.propos div form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.propos div form input:not(:last-child){
+    width: 50%;
+    margin: auto;
+}
+/* account */
+
 /* Fin  css Body */
 
+/* mediaquery */
+@media (max-width: 1024px){
+    nav ul li{
+        display: none;
+    }
+    body{
+        background-image: url(/assets/img/backgroundsmall.png);
+    }
+    .menu{
+        flex-direction: column;
+    }
+     #burgermenu{
+         display: block;
+     }
+     header{
+         padding: 1%;
+         background-color: rgba(1, 1, 1, 20%);
+     }
+     .burgerdisplay{
+         display: block;
+     }
+     .menu a:nth-child(5){
+        display: block;   
+    }
+     .menu a:nth-child(4){
+         display: none;
+     }
+     header nav div div a{
+        display: inline; 
+    }
+ 
+    header nav div{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav div div img{
+        width: 75px;
+        height: auto;
+        
+    }
+    .active{
+        color:#E59560;
+    }
+    a:hover {
+        color: #E59560;
+    }
+    .productmain{
+        flex-wrap: wrap;
+    }
+    .filters ul{
+        flex-direction: column;
+    }
+    .filters ul li:first-child{
+        display: none;
+    }
+    .panier{
+        width: 70%;
+        top: 6rem;
+    }
+    .account{
+        width: 70%;
+    }
+}
+/* mediaquery */

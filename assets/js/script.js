@@ -18,55 +18,83 @@ function burger() {
 }
 
 var productmen = JSON.parse(productmen)
+var productwoman = JSON.parse(productwoman)
+var productnew = JSON.parse(productnew)
+// Declaration des tableaux de produit venant de la database
 
-// Declaration du tableau de produit pour homme venant de la database
-
-// Création de la page avec tout les produits pour homme
-function createMenCard() {
-  for (let i = 0; i < productmen.length; i++) {
-    //je remplis ma section d'autant de card qu'il y as de ligne
-    $('.men-product').append(
-      '<div class="card ' + productmen[i].classname + '" style="width: 18rem;">' +
-      '<img class="card-img-top" src="' + productmen[i].img + '" alt="image du ' + productmen[i].nom + '">' +
+// Création de la page avec tout les produits
+function createCard(name) {
+  if(name=='men'){
+    var product = productmen
+  }
+  else if(name=='woman'){
+    var product = productwoman
+  }
+  else if(name=='new'){
+    var product = productnew
+  }
+  console.log(name)
+  for (let i = 0; i < product.length; i++) {
+    //je remplis ma section d'autant de card qu'il y as de ligne 
+    $('.'+name+'-product').append(
+      '<div class="card ' + product[i].classname + '" style="width: 18rem;">' +
+      '<img class="card-img-top" src="' + product[i].img + '" alt="image du ' + product[i].nom + '">' +
       '<div class="card-body">' +
-      '<h5 class="card-title"><a href="#" onclick="createMenProduct(' + productmen[i].id + ')">' + productmen[i].nom + '</a></h5>' +
-      '<p class="card-text">' + productmen[i].price + '</p>' +
-      '<a href="#" class="btn btn-primary">Ajouter au panier</a>' +
+      '<h5 class="card-title"><a href="#" onclick="createProduct(' + product[i].id + ',\''+name+'\')">' + product[i].nom + '</a></h5>' +
+      '<p class="card-text">' + product[i].price + '</p>' +
+      '<a href="#" rel="unfollow" class="btn btn-primary" onclick="generatePanier('+ product[i].id+',\''+ name+'\')">Ajouter au panier</a>' +
       '</div>' +
       '</div>');
       //je remplit les card dynamiquement en loadant les informations de la data base
   }
 }
-createMenCard()
-// Création de la page avec tout les produits pour homme
-function createMenProduct(id) {
+
+
+// Création de la page avec tout les produits
+function createProduct(id,path) {
+
+  if(path=='men'){
+    var product = productmen
+    var name = 'men'
+  }
+  if(path=='woman'){
+    var product = productwoman
+    var name = 'woman'
+  }
+  if(path=='new'){
+    var product = productnew
+    var name = 'new'
+  }
 
   $('.men-product').hide();
   $('.filters').hide();
   $('.framer').hide();
   $('.product').show();
 // je masque les different elements que je ne veux pas 
+
+
+
   $('.itemsimg').append(
-    `<img src=" ${productmen[id - 1].img} " alt="">`
+    `<img src=" ${product[id - 1].img} " alt="">`
   );
   $('.itemscarac').append(
-    `<h1> ${productmen[id-1].nom} </h1>
-      <h2> ${productmen[id-1].price}€ </h2>
-      <p>${productmen[id-1].desc}</p>`
+    `<h1> ${product[id-1].nom} </h1>
+      <h2> ${product[id-1].price}€ </h2>
+      <p>${product[id-1].desc}</p>`
   );
   // affichage des données de l'article en question
   id=0
   for (i = 0; i < 4; i++) {
-    let number = Math.floor(Math.random() * Math.floor(productmen.length));
+    let number = Math.floor(Math.random() * Math.floor(product.length));
     console.log(number)
     // ici je tire des nombres aleatoires afin d'afficher des lignes aleatoires du tableau pour montrer d'autres articles 
     $('.similar').append(
       `<div class="card" style="width: 18rem;">
-        <img class="card-img-top" src=" ${productmen[number].img} " alt="Card image cap" class="image">
+        <img class="card-img-top" src=" ${product[number].img} " alt="${product[number].nom}" class="image">
         <div class="card-body">
-        <h2 class="card-text"><a href="#" onclick="productclear(),createMenProduct( ${productmen[number].id })"> ${productmen[number].nom} </a> </h2>
-        <p class="card-text">${productmen[number].price} </p>
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+        <h2 class="card-text"><a href="#" onclick="productclear(),createProduct( ${product[number].id },\'${name}\')"> ${product[number].nom} </a> </h2>
+        <p class="card-text">${product[number].price} </p>
+        <a href="#" rel="unfollow" class="btn btn-primary" onclick="generatePanier( ${product[number].id },\'${name}\')">Ajouter au panier</a>
         </div>
         </div>`
         //j'affiche les informations des produits similaires en utilisant les nombres aleatoires dans le tableau comme reperes 
@@ -88,41 +116,86 @@ function productclear(){
 
 // Création des pages produit unique pour homme
 
-var productwoman = JSON.parse(productwoman)
 
-function createWomanCard() {
 
-  $('.men-product').hide();
-  $('.filters').show();
-  $('.framer').show();
 
-  for (let i = 0; i < productwoman.length; i++) {
-    $('.woman-product').append(
-      `<div class="card  ${productwoman[i].classname} " style="width: 18rem;">
-      <img class="card-img-top" src=" ${productwoman[i].img} " alt="image du  ${productwoman[i].nom} ">
-      <div class="card-body">
-      <h5 class="card-title"><a href="#">${productwoman[i].nom} </a></h5>
-      <p class="card-text">${productwoman[i].price} </p>
-      <a href="#" class="btn btn-primary">Ajouter au panier</a>
-      </div>
-      </div>`);
+// Panier
+
+let total = 0
+let totaldel=0
+let totaladd=0
+// variable qui me sert a stocker le prix du total
+
+function generatePanier(id,name){
+  event.preventDefault()
+  if(name=='men'){
+    var product = productmen
+    var name = 'men'
   }
+  if(name=='woman'){
+    var product = productwoman
+    var name = 'woman'
+  }
+  if(name=='new'){
+    var product = productnew
+    var name = 'new'
+  }
+  id=id-1
+  console.log(id,name)
+  totaladd=totaladd+product[id].price
+  $('.panier').append(
+    `<div id="${id}">
+    <img src="${product[id].img}" alt="">
+    <div>
+      <h2>${product[id].price}</h2>
+      <h3>${product[id].nom}</h3>
+      <button class="btn btn-primary" onclick="deleteCartProduct(${id},${product[id].price})">Supprimer du panier</button>
+    </div>
+    
+  </div>`
+  );
+  totalprice()
+
+}
+function showpanier() {
+  $('.panier').toggle();
+  $('.account').hide();
 }
 
-var productnew = JSON.parse(productnew)
+function deleteCartProduct(id,price){
+  $('#'+id+'').remove();
+ 
+  totaldel=totaldel-price
+  totalprice()
+}
+function totalprice(){
+  total=totaladd+totaldel
+  total=Math.round(x=total * 100) / 100
+  $('.total').html(
+    '<h3>Total = '+total+'</h3>'+
+    '<a href="#" class="btn btn-primary" onclick="commander()">Commander</a>'
+  );
+}
 
-function createNewCard() {
-  for (let i = 0; i < productnew.length; i++) {
-    $('.woman-product').append(
-      '<div class="card ' + productnew[i].classname + '" style="width: 18rem;">' +
-      '<img class="card-img-top" src="' + productnew[i].img + '" alt="image du ' + productnew[i].nom + '">' +
-      '<div class="card-body">' +
-      '<h5 class="card-title"><a href="#id=' + productnew[i].id + '" onclick="createWomanCard()>' + productnew[i].nom + '</a></h5>' +
-      '<p class="card-text">' + productnew[i].price + '</p>' +
-      '<a href="#" class="btn btn-primary">Ajouter au panier</a>' +
-      '</div>' +
-      '</div>');
-  }
+function commander(){
+  alert('Commande effectuée avec succes')
+  $('.panier').empty();
+  $('.panier').hide();
+
+}
+function showaccount() {
+  $('.account').toggle();
+  $('.panier').hide();
+}
+// Ici je definis une fonction qui affiche ou non le panier au clic sur le bouton panier
+
+
+// Panier
+
+function clearproduct(){
+  $('.men-product').empty();
+  $('.woman-product').empty();
+  $('.news-product').empty();
 }
 
 function showmen() {
@@ -176,6 +249,8 @@ function showindex() {
   $('.framer').hide();
   $('body').removeClass('background');
   productclear()
+  $('.panier').hide();
+  $('.account').hide();
 }
 
 function showpropos() {
@@ -185,8 +260,8 @@ function showpropos() {
   $('.index').hide();
   $('.propos').show();
   $('.product').hide();
-  $('.filters').show();
-  $('.framer').show();
+  $('.filters').hide();
+  $('.framer').hide();
   $('body').addClass('background')
   productclear()
 }

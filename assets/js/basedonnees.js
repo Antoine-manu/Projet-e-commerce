@@ -1,12 +1,11 @@
-var productmen = [
-    {
+var productmen = [{
         "id": 1,
         "img": "assets/img/vetements/homme/hmgoepprod (1).jpg",
         "nom": "Sweat Bob l'eponge",
         "price": 29.99,
         "desc": "Sweat bob l'eponge 100% coton frabriqué en andore",
-        "classname" : "sweat 50 vert",
-        "type" : "1"
+        "classname": "sweat 50 vert",
+        "type": "1"
     },
     {
         "id": 2,
@@ -14,8 +13,8 @@ var productmen = [
         "nom": "Sweat Nirvana",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 noir",
-        "type" : "1"
+        "classname": "sweat 50 noir",
+        "type": "1"
     },
     {
         "id": 3,
@@ -23,8 +22,8 @@ var productmen = [
         "nom": "Sweat Marylyn Manson",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 noir",
-        "type" : "2"
+        "classname": "sweat 50 noir",
+        "type": "2"
     },
     {
         "id": 4,
@@ -32,7 +31,7 @@ var productmen = [
         "nom": "Sweat JIIB",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 noir"
+        "classname": "sweat 50 noir"
     },
     {
         "id": 5,
@@ -40,7 +39,7 @@ var productmen = [
         "nom": "Sweat Scarface",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 rose"
+        "classname": "sweat 50 rose"
     },
     {
         "id": 6,
@@ -48,7 +47,7 @@ var productmen = [
         "nom": "Veste en moumoutte",
         "price": 39.99,
         "desc": "",
-        "classname" : "jacket 50 beige"
+        "classname": "jacket 50 beige"
     },
     {
         "id": 7,
@@ -56,7 +55,7 @@ var productmen = [
         "nom": "Surchemise noir",
         "price": 19.99,
         "desc": "",
-        "classname" : "chemise 25 noir"
+        "classname": "chemise 25 noir"
     },
     {
         "id": 8,
@@ -64,7 +63,7 @@ var productmen = [
         "nom": "Veste en jean noir",
         "price": 29.99,
         "desc": "",
-        "classname" : "jacket 50 noir"
+        "classname": "jacket 50 noir"
     },
     {
         "id": 9,
@@ -72,7 +71,7 @@ var productmen = [
         "nom": "Veste en moumoutte",
         "price": 39.99,
         "desc": "",
-        "classname" : "jacket 50 beige"
+        "classname": "jacket 50 beige"
     },
     {
         "id": 10,
@@ -80,7 +79,7 @@ var productmen = [
         "nom": "Sweat Javs",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 blanc"
+        "classname": "sweat 50 blanc"
     },
     {
         "id": 11,
@@ -88,7 +87,7 @@ var productmen = [
         "nom": "T-shirt Metallica",
         "price": 14.99,
         "desc": "",
-        "classname" : "tshirt 25 noir"
+        "classname": "tshirt 25 noir"
     },
     {
         "id": 12,
@@ -96,7 +95,7 @@ var productmen = [
         "nom": "Sweat Justin Biber",
         "price": 29.99,
         "desc": "",
-        "classname" : "sweat 50 rose"
+        "classname": "sweat 50 rose"
     },
     {
         "id": 13,
@@ -104,7 +103,7 @@ var productmen = [
         "nom": "Surchemise noir",
         "price": 24.99,
         "desc": "",
-        "classname" : "chemise 25 noir"
+        "classname": "chemise 25 noir"
     },
     {
         "id": 14,
@@ -112,7 +111,7 @@ var productmen = [
         "nom": "Jean brute bleu",
         "price": 39.99,
         "desc": "",
-        "classname" : "pants 50 bleu"
+        "classname": "pants 50 bleu"
     },
     {
         "id": 15,
@@ -120,7 +119,7 @@ var productmen = [
         "nom": "Coupe-vent",
         "price": 39.99,
         "desc": "",
-        "classname" : "jacket 50 rose noir"
+        "classname": "jacket 50 rose noir"
     },
     {
         "id": 16,
@@ -128,7 +127,7 @@ var productmen = [
         "nom": "T-shirt coordonnées",
         "price": 19.99,
         "desc": "",
-        "classname" : "tshirt 25 noir"
+        "classname": "tshirt 25 noir"
     },
     {
         "id": 17,
@@ -136,7 +135,7 @@ var productmen = [
         "nom": "Parka",
         "price": 79.99,
         "desc": "",
-        "classname" : "jacket 100 marron"
+        "classname": "jacket 100 marron"
     },
     {
         "id": 18,
@@ -144,7 +143,7 @@ var productmen = [
         "nom": "Cargo",
         "price": 29.99,
         "desc": "",
-        "classname" : "pants 50 noir"
+        "classname": "pants 50 noir"
     },
     {
         "id": 19,
@@ -152,7 +151,7 @@ var productmen = [
         "nom": "Jean troué noir",
         "price": 39.99,
         "desc": "",
-        "classname" : "pants 50 noir"
+        "classname": "pants 50 noir"
     },
     {
         "id": 20,
@@ -160,7 +159,7 @@ var productmen = [
         "nom": "Doudoune",
         "price": 49.99,
         "desc": "",
-        "classname" : "jacket 50 beige marron"
+        "classname": "jacket 50 beige marron"
     },
     {
         "id": 21,
@@ -168,7 +167,7 @@ var productmen = [
         "nom": "Chemise noir",
         "price": 19.99,
         "desc": "",
-        "classname" : "chemise 25 noir"
+        "classname": "chemise 25 noir"
     },
     {
         "id": 22,
@@ -176,12 +175,28 @@ var productmen = [
         "nom": "Jean bleu ciel",
         "price": 39.99,
         "desc": "",
-        "classname" : "pants 50 bleu"
-    },
+        "classname": "pants 50 bleu"
+    }
 ]
 productmen = JSON.stringify(productmen)
 
-var productwoman = []
+var productwoman = [{
+        "id": 21,
+        "img": "assets/img/vetements/homme/hmgoepprod (21).jpg",
+        "nom": "Chemise noir",
+        "price": 19.99,
+        "desc": "",
+        "classname": "chemise 25 noir"
+    },
+    {
+        "id": 22,
+        "img": "assets/img/vetements/homme/hmgoepprod (22).jpg",
+        "nom": "Jean bleu ciel",
+        "price": 39.99,
+        "desc": "",
+        "classname": "pants 50 bleu"
+    }
+]
 
 productwoman = JSON.stringify(productwoman)
 
