@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/img/background.PNG);
+    background-image: url(assets/img/background.PNG);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #F6F4E8;
@@ -326,7 +326,7 @@ section .card{
         display: none;
     }
     body{
-        background-image: url(/assets/img/backgroundsmall.png);
+        background-image: url(assets/img/backgroundsmall.png);
     }
     .menu{
         flex-direction: column;
