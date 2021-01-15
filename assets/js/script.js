@@ -80,7 +80,8 @@ function createProduct(id,path) {
   $('.itemscarac').append(
     `<h1> ${product[id-1].nom} </h1>
       <h2> ${product[id-1].price}€ </h2>
-      <p>${product[id-1].desc}</p>`
+      <p>${product[id-1].desc}</p>
+      <a href="#" class="btn btn-primary edit boutonpanier" onclick="generatePanier( ${product[id-1].id },\'${name}\')">Ajouter au panier</a>`
   );
   // affichage des données de l'article en question
   id=0
@@ -94,7 +95,7 @@ function createProduct(id,path) {
         <div class="card-body">
         <h2 class="card-text"><a href="#" onclick="productclear(),createProduct( ${product[number].id },\'${name}\')"> ${product[number].nom} </a> </h2>
         <p class="card-text">${product[number].price} </p>
-        <a href="#" rel="unfollow" class="btn btn-primary" onclick="generatePanier( ${product[number].id },\'${name}\')">Ajouter au panier</a>
+        <a href="#" rel="unfollow" class="btn btn-primary" onclick="generatePanier( ${product[number].id },\'${name}\'),">Ajouter au panier</a>
         </div>
         </div>`
         //j'affiche les informations des produits similaires en utilisant les nombres aleatoires dans le tableau comme reperes 
@@ -151,7 +152,7 @@ function generatePanier(id,name){
     <div>
       <h2>${product[id].price}</h2>
       <h3>${product[id].nom}</h3>
-      <button class="btn btn-primary" onclick="deleteCartProduct(\'${identification}\',${product[id].price})">Supprimer du panier</button>
+      <button class="btn btn-primary" onclick="deleteCartProduct(\'${identification}\',${product[id].price}),">Supprimer du panier</button>
     </div>
     
   </div>`
