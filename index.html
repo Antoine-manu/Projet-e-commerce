@@ -26,22 +26,39 @@
   <!-- Debut header -->
   <header id="header">
     <nav>
-        <ul class="menu">
-            <a href="#" rel="unfollow" onclick="showmen(), clearproduct(), createCard('men')"><li>Homme</li></a>
-            <a href="#" rel="unfollow" onclick="showwoman(), clearproduct(), createCard('woman')"><li>Femme</li></a>
-            <a href="#" rel="unfollow" onclick="shownew(), clearproduct(), createCard('new')"><li >News</li></a>
-            <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li ><img src="assets/img/V.F.C.png" alt="logo du site"></li></a>
-            <a href="#" rel="unfollow" onclick="clearproduct(), showindex()"><li >Home</li></a>
-            <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()"><li >A propos</li></a>
-            <a href="#" rel="unfollow" onclick="clearproduct(), showcontact()"><li >Contact</li></a>
-            <a href="#" rel="unfollow"><li ><img src="assets/img/account.png" alt="icon account" class=" icon " onclick="showaccount()"></li></a>
-        </ul>
-        <div>
-          <button id="burgermenu" onclick="burger()"><img src="assets/img/588a64e7d06f6719692a2d11.png" alt=""  class="icon"></button>
-        </div>
+      <ul class="menu">
+        <a href="#" rel="unfollow" onclick="showmen(), clearproduct(), createCard('men')">
+          <li>Homme</li>
+        </a>
+        <a href="#" rel="unfollow" onclick="showwoman(), clearproduct(), createCard('woman')">
+          <li>Femme</li>
+        </a>
+        <a href="#" rel="unfollow" onclick="shownew(), clearproduct(), createCard('new')">
+          <li>Enfants</li>
+        </a>
+        <a href="#" rel="unfollow" onclick="clearproduct(), showindex()">
+          <li><img src="assets/img/V.F.C.png" alt="logo du site"></li>
+        </a>
+        <a href="#" rel="unfollow" onclick="clearproduct(), showindex()">
+          <li>Home</li>
+        </a>
+        <a href="#" rel="unfollow" onclick="clearproduct(), showpropos()">
+          <li>A propos</li>
+        </a>
+        <a href="#" rel="unfollow" onclick="clearproduct(), showcontact()">
+          <li>Contact</li>
+        </a>
+        <a href="#" rel="unfollow">
+          <li><img src="assets/img/account.png" alt="icon account" class=" icon " onclick="showaccount()"></li>
+        </a>
+      </ul>
+      <div>
+        <button id="burgermenu" onclick="burger()"><img src="assets/img/588a64e7d06f6719692a2d11.png" alt=""
+            class="icon"></button>
+      </div>
     </nav>
 
-</header>
+  </header>
   <!-- Fin header -->
 
   <!-- Pubs -->
@@ -55,13 +72,13 @@
     </figure>
   </div>
   <!-- Pubs -->
-  <div class="panier" >
-    
+  <div class="panier">
+
     <div class="total">
-      
+
     </div>
   </div>
-  <div class="account" >
+  <div class="account">
     <div>
       <form action="get">
         <label for="user">Username</label>
@@ -73,20 +90,21 @@
         <button onclick="showaccount()">Se connecter</button>
         <button class="buttonaccount" onclick="showaccount(), burger()">Back</button>
       </div>
-      
+
     </div>
   </div>
   <!-- Sticky elements -->
   <div class="scrollUp">
     <a href="#header"><img src="assets/img/home.png" alt="" class="icon fixed"></a>
-    <a href="#header"><img src="assets/img/paniers classique.png" onclick="showpanier()" alt="icon panier" class="icon fixed2"></a>
+    <a href="#header"><img src="assets/img/paniers classique.png" onclick="showpanier()" alt="icon panier"
+        class="icon fixed2"></a>
   </div>
   <!-- Sticky elements -->
 
 
 
   <!-- Debut main -->
-  
+
   <!-- Debut filtres -->
   <div class="filters">
     <ul>
@@ -94,7 +112,7 @@
       <li>
         <select id="type" onclick="filterstype()">
           <option value="0" selected disabled>Type</option>
-          <option value="1" >Pulls</option>
+          <option value="1">Pulls</option>
           <option value="2">T-Shirt</option>
           <option value="3">Chemise</option>
           <option value="4">Pantalon</option>
@@ -117,7 +135,7 @@
       <li>
         <select id="price" onclick="filtersprice()">
           <option value="0" selected disabled>Prix</option>
-          <option value="1" >- de 25</option>
+          <option value="1">- de 25</option>
           <option value="2">- de 50</option>
           <option value="3">- de 75</option>
           <option value="4">- de 100</option>
@@ -141,8 +159,10 @@
     </section>
     <section class="index">
       <div class="main-content">
-        <h1>New collection</h1>
-        <a href="#" rel="unfollow" onclick="shownew()"><p>Cliquez ici pour en savoir plus</p></a>
+        <h1>New collection pour enfant!</h1>
+        <a href="#" rel="unfollow" onclick="shownew(), clearproduct(), createCard('new')">
+          <p>Cliquez ici pour en savoir plus</p>
+        </a>
       </div>
     </section>
     <section class="product">
@@ -152,17 +172,64 @@
         </div>
         <div class="container">
           <div class="itemscarac">
-    
+
           </div>
-          
+
         </div>
       </div>
       <div class="similar">
-
       </div>
     </section>
     <section class="propos">
-      
+      <h1>PETITE HISTOIRE DE LA FRIPE…</h1>
+      <p>À l’époque médiévale, le prêt-à-porter n’existe pas à l’exception de quelques pièces vendues dans les boutiques de
+        merciers (coiffes féminines, chapeaux de paille, bonnets pour enfants, boutons, ceintures…). Le vêtement est
+        réalisé exclusivement sur mesure par fabrication domestique (couture, filage, tissage) ou par façon chez un
+        drapier, un tailleur, un pelletier qui travaille les peaux pour le cuir ou les fourrures, un cordonnier, un
+        chapelier, etc… Néanmoins, un marché de seconde main existe déjà à cette époque. Il est d’ailleurs essentiel car à
+        l’origine de la circulation des modes. On parle de marché de la fripe !
+        Les fripiers tiennent alors boutiques ou sont des marchands ambulants.</p>
+      <p>
+        Les fourrures d’occasion notamment sont vendues par des pelletiers de vieux ou vieux-vairiers (du nom de la
+      fourrure de vair revêtant la célèbre pantoufle de Cendrillon). Si le terme de fripe vient de l’ancien français
+      frepe, signifiant chiffon ou vieux vêtements, il n’a pas toujours été synonyme de pauvreté. En effet, au XVe
+      siècle, il est de bon ton d’orner les bords de ses manches et de ses chausses de bandes de tissu découpé : les
+      freppes (lat. frappa, lambeau d’étoffe).
+      On parle aussi de « découpures », de « déchiquetailles » ou de « déchiquetures » qui étaient très en vogue à la
+      cour de Bourgogne. Seuls les membres de la plus haute aristocratie pouvaient se permettre l’extravagance de
+      taillader leurs vêtements.
+      </p>
+      <p>
+        Au XIXe siècle, Paris devient la plaque tournante du commerce fripier. De nombreux vêtements arrivent en transit à
+      Paris et sont redistribués en Europe. La fripe participe alors à la diffusion de la mode. Lors d’un voyage à
+      Strasbourg, l’impératrice Joséphine de Beauharnais avait donné des robes à ses dames, qui les avaient elles-mêmes
+      vendues aux nobles strasbourgeoises et allemandes. Ces dernières portaient ensuite ces vêtements, alors légèrement
+      démodés, lors de bals somptueux.
+
+      Le marché.
+      </p>
+      <p>
+        Entre 1809 et 1811, les hangars du Carreau du Temple sont construits à Paris. 1880 échoppes de fripiers
+      constituent le marché aux vieux linges. Les vêtements sont rachetés à des particuliers ruinés ou au mont-de-piété.
+        Le Carreau est divisé en plusieurs secteurs en fonction des articles que l’on y vend. On trouve ainsi des
+      vêtements en bon état, parfois à peine portés dans le cossu Carré du Palais-Royal. Ceux-ci ont généralement été
+      achetés à des domestiques ayant hérité des vêtements de leurs maîtres. Le Carré de Flore revendait du linge et
+      ceux en quête de petite maroquinerie ou de chaussures raccommodées trouvaient leur bonheur au Carré de la Forêt
+      noire. Enfin, les plus misérables pouvaient s’offrir une limace (chemise) ou encore un décrochez-moi-ça (chapeau
+      de femme) au Carré du Pou Volant !
+
+      Les grands magasins.
+      </p>
+      <p>
+        Nos brocanteurs d’habits seront bientôt délaissés avec l’essor des Grands Magasins sous la Troisième République.
+        La confection permet d’avoir du neuf à moindre coût. A cela s’ajoute l’essor de l’hygiénisme et les découvertes de
+        Pasteur sur les microbes qui donnent le coup fatal à nos marchés aux puces.
+  
+        Le retour de la fripe.
+  
+        Depuis quelques années à présent, la fripe a retrouvé ses lettres de noblesse. Elle est le moyen de dénicher des
+        pièces fortes et uniques dans une conception plus responsable de consommation.
+      </p>
     </section>
     <section class="contact">
       <div>
@@ -179,10 +246,16 @@
           <input type="text-area">
         </form>
       </div>
-      <div>
-        <img src="assets/img/icons8-facebook-64.png" alt="icon facebook">
-        <img src="assets/img/icons8-instagram-64.png" alt="icon instagram">
-        <img src="assets/img/icons8-twitter-64.png" alt="icon twitter">
+      <div class="iconcontact">
+        <a href="#"><img src="assets/img/icons8-facebook-64.png" alt="icon facebook"></a>
+        <a href="#"><img src="assets/img/icons8-instagram-64.png" alt="icon instagram"></a>
+        <a href="#"><img src="assets/img/icons8-twitter-64.png" alt="icon twitter"></a>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.468589531507!2d2.2992870157111547!3d49.89000537940187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e7857c0e87f5fb%3A0x37fb21b742d12b66!2sLa%20Manu%20-%20L&#39;%C3%89cole%20des%20m%C3%A9tiers%20du%20num%C3%A9rique!5e0!3m2!1sfr!2sfr!4v1610718804285!5m2!1sfr!2sfr"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
       </div>
     </section>
 
@@ -190,18 +263,23 @@
   <!-- Fin main -->
 
   <!-- Debut footer -->
-  <footer >
-
+  <footer>
+    <div>
+      <p>Votre adresse de messagerie est uniquement utilisée pour vous envoyer les mails d'informations et de suivit de
+        vos commandes.
+        Vous pouvez à tout moment utiliser le lien de désabonnement. En savoir plus sur la
+        gestion de vos données et vos droits dans la rubrique a propos</p>
+    </div>
   </footer>
   <!-- Fin du footer -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
   </script>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script src="assets/js/basedonnees.js"></script>
   <script src="assets/js/script.js"></script>
-  
-  
+
+
 
 
 </body>

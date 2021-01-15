@@ -384,6 +384,135 @@ var productwoman = [{
 
 productwoman = JSON.stringify(productwoman)
 
-var productnew = []
+var productnew = [
+    {
+    "id": 1,
+    "img": "assets/img/vetements/child/hmgoepprod (1).jpg",
+    "nom": "Ensemble jogging boston",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 noir"
+},
+    {
+    "id": 2,
+    "img": "assets/img/vetements/child/hmgoepprod (2).jpg",
+    "nom": "Sweat dinosaure",
+    "price": 39.99,
+    "desc": "",
+    "classname": "sweat 50 vert"
+},
+    {
+    "id": 3,
+    "img": "assets/img/vetements/child/hmgoepprod (3).jpg",
+    "nom": "Jogging",
+    "price": 59.99,
+    "desc": "",
+    "classname": "pants 50 vert"
+},
+    {
+    "id": 4,
+    "img": "assets/img/vetements/child/hmgoepprod (4).jpg",
+    "nom": "Jogging techwear",
+    "price": 29.99,
+    "desc": "",
+    "classname": "pants 50 noir"
+},
+    {
+    "id": 5,
+    "img": "assets/img/vetements/child/hmgoepprod (5).jpg",
+    "nom": "Sweat T-rex",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 marron"
+},
+    {
+    "id": 6,
+    "img": "assets/img/vetements/child/hmgoepprod (6).jpg",
+    "nom": "Sweat boston",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 vert"
+},
+    {
+    "id": 7,
+    "img": "assets/img/vetements/child/hmgoepprod (7).jpg",
+    "nom": "Sweat minie",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 rose"
+},
+    {
+    "id": 8,
+    "img": "assets/img/vetements/child/hmgoepprod (8).jpg",
+    "nom": "Manteau en laine beige",
+    "price": 49.99,
+    "desc": "",
+    "classname": "jacket 50 beige"
+},
+    {
+    "id": 9,
+    "img": "assets/img/vetements/child/hmgoepprod (9).jpg",
+    "nom": "Sweat Brooklyn",
+    "price": 39.99,
+    "desc": "",
+    "classname": "sweat 50 bleu"
+},
+    {
+    "id": 10,
+    "img": "assets/img/vetements/child/hmgoepprod (10).jpg",
+    "nom": "Manteau en laine",
+    "price": 59.99,
+    "desc": "",
+    "classname": "jacket 75 rose"
+},
+    {
+    "id": 11,
+    "img": "assets/img/vetements/child/hmgoepprod (11).jpg",
+    "nom": "Sweat SKATE",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 noir"
+},
+    {
+    "id": 12,
+    "img": "assets/img/vetements/child/hmgoepprod (12).jpg",
+    "nom": "Jogging Tigre",
+    "price": 24.99,
+    "desc": "",
+    "classname": "pants 25 vert"
+},
+    {
+    "id": 13,
+    "img": "assets/img/vetements/child/hmgoepprod (13).jpg",
+    "nom": "Chemise",
+    "price": 19.99,
+    "desc": "",
+    "classname": "chemise 25 blanc"
+},
+    {
+    "id": 14,
+    "img": "assets/img/vetements/child/hmgoepprod (14).jpg",
+    "nom": "Impermeable",
+    "price": 29.99,
+    "desc": "",
+    "classname": "jacket 50 vert"
+},
+    {
+    "id": 15,
+    "img": "assets/img/vetements/child/hmgoepprod (15).jpg",
+    "nom": "Sweat",
+    "price": 29.99,
+    "desc": "",
+    "classname": "sweat 50 marron"
+},
+    {
+    "id": 16,
+    "img": "assets/img/vetements/child/hmgoepprod (16).jpg",
+    "nom": "Jeans",
+    "price": 29.99,
+    "desc": "",
+    "classname": "pants 50 bleu"
+},
+]
 
 productnew = JSON.stringify(productnew)

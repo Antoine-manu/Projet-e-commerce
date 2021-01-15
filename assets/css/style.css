@@ -1,11 +1,14 @@
 body {
-    background-image: url(assets/img/background.PNG);
+    background-image: url(/assets/img/background.PNG);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #F6F4E8;
     font-family: 'Lobster', cursive;
     font-size: 2rem;
     color: #1D3124;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 a {
@@ -316,6 +319,26 @@ section .card{
     width: 50%;
     margin: auto;
 }
+.iconcontact{       
+    text-align: center;
+}
+.iconcontact img{
+    width: 20%;
+    height: auto;
+}
+.map{
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 10%;
+}
+footer{
+    background-color:#F6F4E8 ;
+    border-top:black solid 1px ;
+    margin-top: 2%;
+    bottom: 0;
+    position: absolute;
+    font-size: 1.2rem;
+}
 /* account */
 
 /* Fin  css Body */
@@ -326,7 +349,7 @@ section .card{
         display: none;
     }
     body{
-        background-image: url(assets/img/backgroundsmall.png);
+        background-image: url(/assets/img/backgroundsmall.png);
     }
     .menu{
         flex-direction: column;
@@ -379,9 +402,31 @@ section .card{
         width: 70%;
         top: 6rem;
     }
+
     .account{
         z-index: 100;
         width: 70%;
+    }
+    .itemsimg img{
+        width: 100%;
+        height: auto;
+    }
+    footer{
+        font-size: 0.5rem;
+    }
+    .propos label,input{
+        width: 100%;
+        height: auto;
+    }
+    .map{
+        display: none;
+        padding:0 ;
+    }
+    .iconcontact{
+        padding-top:10%;
+    }
+    .propos{
+        font-size: 1rem;
     }
 }
 /* mediaquery */

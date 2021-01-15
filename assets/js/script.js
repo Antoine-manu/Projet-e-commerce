@@ -232,6 +232,7 @@ function showmen() {
   $('body').addClass('background')
   productclear()
   $('.contact').hide();
+  $('footer').show();
 }
 
 function showwoman() {
@@ -246,6 +247,7 @@ function showwoman() {
   $('body').addClass('background')
   productclear()
   $('.contact').hide();
+  $('footer').show();
 }
 
 function shownew() {
@@ -260,6 +262,7 @@ function shownew() {
   $('body').addClass('background')
   productclear()
   $('.contact').hide();
+  $('footer').show();
 }
 
 function showindex() {
@@ -276,6 +279,7 @@ function showindex() {
   $('.panier').hide();
   $('.account').hide();
   $('.contact').hide();
+  $('footer').hide();
 }
 
 function showpropos() {
@@ -290,6 +294,7 @@ function showpropos() {
   $('body').addClass('background')
   productclear()
   $('.contact').hide();
+  $('footer').show();
 }
 function showcontact() {
   $('.men-product').hide();
@@ -303,6 +308,7 @@ function showcontact() {
   $('body').addClass('background')
   productclear()
   $('.contact').show();
+  $('footer').show();
 }
 
 function showproduct() {
@@ -317,6 +323,7 @@ function showproduct() {
   $('body').addClass('background')
   productclear()
   $('.contact').hide();
+  $('footer').show();
 }
 
 //toutes les fonctions filtres sont identiques mais comme au dessus masques et montre differentes div en fonction de la valeur obtenue dans le select
