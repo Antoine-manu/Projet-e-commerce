@@ -33,7 +33,7 @@ function createCard(name) {
   else if(name=='new'){
     var product = productnew
   }
-  console.log(name)
+  console.log(name,product)
   for (let i = 0; i < product.length; i++) {
     //je remplis ma section d'autant de card qu'il y as de ligne 
     $('.'+name+'-product').append(
@@ -53,6 +53,7 @@ function createCard(name) {
 // Création de la page avec tout les produits
 function createProduct(id,path) {
 
+    console.log(path)
   if(path=='men'){
     var product = productmen
     var name = 'men'
@@ -67,6 +68,8 @@ function createProduct(id,path) {
   }
 
   $('.men-product').hide();
+  $('.woman-product').hide();
+  $('.new-product').hide();
   $('.filters').hide();
   $('.framer').hide();
   $('.product').show();
@@ -141,6 +144,7 @@ function generatePanier(id,name){
     var product = productnew
     var name = 'new'
   }
+
   // Ici comme plusieurs fois en bas je declare d'ou viens le clic en l'occurence grace aux parametres mis dans la fonctions dans l'index
   id=id-1
   var identification = name+id
@@ -171,6 +175,8 @@ function showpanier() {
 
 function deleteCartProduct(id,price){
   var id=id
+
+  console.log(id)
   $('#'+id+'').remove();
  
   totaldel=totaldel-price
