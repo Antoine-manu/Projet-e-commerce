@@ -40,7 +40,7 @@ function createCard(name) {
       '<div class="card ' + product[i].classname + '" style="width: 18rem;">' +
       '<img class="card-img-top" src="' + product[i].img + '" alt="image du ' + product[i].nom + '">' +
       '<div class="card-body">' +
-      '<h5 class="card-title"><a href="#" onclick="createProduct(' + product[i].id + ',\''+name+'\')">' + product[i].nom + '</a></h5>' +
+      '<h5 class="card-title"><a href="" onclick="createProduct(' + product[i].id + ',\''+name+'\')">' + product[i].nom + '</a></h5>' +
       '<p class="card-text">' + product[i].price + '</p>' +
       '<a href="#" rel="unfollow" class="btn btn-primary" onclick="generatePanier('+ product[i].id+',\''+ name+'\')">Ajouter au panier</a>' +
       '</div>' +
@@ -162,6 +162,7 @@ function generatePanier(id,name){
   </div>`
   // Je genere les page produit dans la div panier en fonction de quel page il s'agit et dans quel tableau en lui attribiuant un id
   );
+  showpanier()
   totalprice()
 
 }
@@ -206,7 +207,7 @@ function commander(){
 function clearproduct(){
   $('.men-product').empty();
   $('.woman-product').empty();
-  $('.news-product').empty();
+  $('.new-product').empty();
 }
 //fonction pour vider les pages afin d'eviter que tout soit charge en permanence et se charge plusieurs fois
 
