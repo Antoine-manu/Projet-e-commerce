@@ -1,5 +1,5 @@
 body {
-    background-image: url(/assets/img/background.PNG);
+    background-image: url(../img/background.PNG);
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #F6F4E8;
@@ -252,12 +252,12 @@ section .card{
 
 .panier{
     border: solid black 2px;
-    position: absolute;
+    position: sticky;
     display: flex;
     flex-direction: column-reverse;
     width: 20%;
     height: auto;
-    top: 5.4em;
+    top: 0;
     left: 0;
     background-color:#F6F4E8 ;
     z-index: 100;
@@ -349,7 +349,7 @@ footer{
         display: none;
     }
     body{
-        background-image: url(/assets/img/backgroundsmall.png);
+        background-image: url(../img/backgroundsmall.png);
     }
     .menu{
         flex-direction: column;
